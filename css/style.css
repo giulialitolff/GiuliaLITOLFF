@@ -1,0 +1,116 @@
+:root {
+--margeDeLaPage: 100px;
+  --espaceEntreLesBlocs: 0px;
+  --couleurTitre: #900;
+  --couleurDuTexte: black;
+  --couleurFond: rgb(242, 238, 234);
+  --largeurPremierBloc: 500px;
+  --largeurAside: 250px;
+  --fontsizeGlobal: 16px;
+  --fontSizeH1: 60px;
+  --fontSizeH2: 40px;
+}
+
+/*typo*/
+
+
+html{
+	font-family: "woffTYPO";
+	font-size: var(--fontsizeGlobal);
+ background-color: var(--couleurFond);
+ color: var(--couleurDuTexte);
+ width: 100vw;
+}
+
+
+
+*{
+	box-sizing: border-box;
+}
+
+header{
+	width: var(--largeurPremierBloc);
+	background-color: rgb(255, 255, 255);
+}
+
+aside{
+	width: var(--largeurAside)
+}
+
+h1{
+	color: var(--couleurTitre);
+	font-size: var(--fontSizeH1);
+	font-style: italic;
+	margin-bottom: 10px;
+}
+
+h2{
+	color: var(--couleurTitre);
+	font-size: var(--fontSizeH2);
+	font-style: italic;
+	margin-bottom: 10px;
+}
+
+body{
+	width: 100%;
+  padding: var(--margeDeLaPage);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+body>*{
+	margin-right: var(--espaceEntreLesBlocs);
+}
+
+.galerie_horizontale{
+	  width: auto;
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.galerie_horizontale>*{
+	  width: auto;
+  height: 30%;
+  position: relative;
+}
+
+.fullPage{
+	width: 100vw;
+	position: relative;
+	left: calc( var(--margeDeLaPage)* -1 );
+}
+
+figure,video{
+	height: auto;
+	width: 100%;
+	position: relative;
+}
+
+figcaption{
+	font-style: italic;
+	top: 0px;
+  position: absolute;
+  left: 10px;
+  color: var(--couleurTitre);
+  font-size: var(--fontSizeH1);
+}
+
+
+
+/* canvas{display: none;} */
+
+
+.premier{
+	background-color: rgb(218, 218, 165);
+}
+
+@font-face {
+  font-family: "woffTYPO";
+  src:
+    url("../PicNic.woff") format("woff");
+}
